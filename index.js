@@ -8,21 +8,12 @@ let myserver = myhttp.createServer(
         let mytext;
         if ( myrequest.url === '/hey' ) {
             mytext = "Hi there! :3";
-        } else {
-            mytext = "That's my purse! I don't know you!";
-        }
-
-        if ( myrequest.url === '/yee' ) {
+        } else if ( myrequest.url === '/yee' ) {
             mytext = "Haw! Howdy partner! :3";
-        } else {
-            mytext = "This town ain't big enough for the two of us!";
-        }
-        
-        if ( myrequest.url === '/sup' ) {
+        } else if ( myrequest.url === '/sup' ) {
             mytext = "Wuddup home slice! :3";
-        } else {
-            mytext = "Yo! Get up off my grill!";
-        }
+        } else { 
+            mytext = "That's my purse! I don't know you!";}
 
         myresponse.writeHead( 200, {"Content-Type": "text/plain" } );
 
